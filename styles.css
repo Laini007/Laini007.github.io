@@ -1,0 +1,143 @@
+/* Importar la tipografía Poppins y estilos globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Estilos generales de la tarjeta */
+.card {
+    width: 260px;
+    background: white;
+    border-radius: -10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen del producto */
+.card img {
+    width: 120px;
+    height: auto;
+    min-height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Descripción */
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Precio */
+.card .price {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Banda inferior (botón) */
+.card .bottom-band {
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+    
+}
+
+/* --- Colores personalizados para cada tarjeta usando nth-child --- */
+
+/* Tarjeta 1 */
+.container .card:nth-child(1) .bottom-band {
+    background-color: #28a745; /* Color base */
+}
+.container .card:nth-child(1) .price {
+    color: #28a745;
+}
+.container .card:nth-child(1):hover .bottom-band {
+    background-color: #ff5733; /* Color al hacer hover */
+}
+.container .card:nth-child(1):hover .price {
+    color: #ff5733;
+}
+
+/* Tarjeta 2 */
+.container .card:nth-child(2) .bottom-band {
+    background-color: #007bff;
+}
+.container .card:nth-child(2) .price {
+    color: #007bff;
+}
+.container .card:nth-child(2):hover .bottom-band {
+    background-color: #ffcc00;
+}
+.container .card:nth-child(2):hover .price {
+    color: #ffcc00;
+}
+
+/* Tarjeta 3 */
+.container .card:nth-child(3) .bottom-band {
+    background-color: #ff9800;
+}
+.container .card:nth-child(3) .price {
+    color: #ff9800;
+}
+.container .card:nth-child(3):hover .bottom-band {
+    background-color: #4caf50;
+}
+.container .card:nth-child(3):hover .price {
+    color: #4caf50;
+}
+/* Subir o bajar la banda inferior de cada tarjeta */
+
+/* Tarjeta 1 */
+.container .card:nth-child(1) .bottom-band {
+    transform: translateY(20px); /* Mueve la banda 10px hacia abajo */
+}
+
+/* Tarjeta 2 */
+.container .card:nth-child(2) .bottom-band {
+    transform: translateY(20px); /* Mantiene la banda en su posición original */
+}
+
+/* Tarjeta 3 */
+.container .card:nth-child(3) .bottom-band {
+    transform: translateY(20px); /* Mueve la banda 10px hacia arriba */
+}
+
